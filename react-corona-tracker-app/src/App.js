@@ -1,8 +1,10 @@
+import TopPage from './pages/TopPages';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <TopPage></TopPage>
     </div>
   );
 }
