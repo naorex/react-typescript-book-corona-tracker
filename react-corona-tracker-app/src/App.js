@@ -30,8 +30,7 @@ function App() {
   };
   return (
     <div>
-      {console.log(countryData)}
-      <TopPage countriesJson={countriesJson} setCountry={setCountry} getCountryData={getCountryData}></TopPage>
+      <TopPage countriesJson={countriesJson} setCountry={setCountry} getCountryData={getCountryData} countryData={countryData}></TopPage>
     </div>
   );
 }
