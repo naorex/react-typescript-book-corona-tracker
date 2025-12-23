@@ -39,7 +39,6 @@ function App() {
         .then((res) => res.json())
         .then((data) => setAllCountriesData(data.Countries));
     };
-    console.log('テスト');
     getAllCountriesData();
   }, []);
 
