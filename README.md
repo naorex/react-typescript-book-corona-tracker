@@ -9,3 +9,11 @@
 ```shell
 npm start
 ```
+
+## デプロイ用のファイル生成
+
+- react-corona-tracker-app フォルダ直下で
+
+```shell
+npm run build
+```
