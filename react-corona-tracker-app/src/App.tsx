@@ -5,21 +5,35 @@ import TopPage from './pages/TopPage';
 import WorldPage from './pages/WorldPage';
 import './App.css';
 
+type CountryDataType = {
+  date: string;
+  newConfirmed: number;
+  totalConfirmed: number;
+  newRecovered: number;
+  totalRecovered: number;
+};
+
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   // 取得した slug を保存する変数（初期値：japan）
-  const [country, setCountry] = useState('japan');
+  const [country, setCountry] = useState<string>('japan');
 
-  const [countryData, setCountryData] = useState({
+  const [countryData, setCountryData] = useState<CountryDataType>({
     date: '',
-    newConfirmed: '',
-    totalConfirmed: '',
-    newRecovered: '',
-    totalRecovered: '',
+    newConfirmed: 0,
+    totalConfirmed: 0,
+    newRecovered: 0,
+    totalRecovered: 0,
   });
 
-  const [allCountriesData, setAllCountriesData] = useState([]);
+  const [allCountriesData, setAllCountriesData] = useState([
+    {
+      Country: '',
+      NewConfirmed: 0,
+      TotalConfirmed: 0,
+    },
+  ]);
 
   useEffect(() => {
     const getCountryData = () => {
