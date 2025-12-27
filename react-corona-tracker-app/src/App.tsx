@@ -4,14 +4,7 @@ import countriesJson from './countries.json';
 import TopPage from './pages/TopPage';
 import WorldPage from './pages/WorldPage';
 import './App.css';
-
-type CountryDataType = {
-  date: string;
-  newConfirmed: number;
-  totalConfirmed: number;
-  newRecovered: number;
-  totalRecovered: number;
-};
+import { CountryDataType, AllCountriesDataType } from './types';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -27,7 +20,7 @@ function App() {
     totalRecovered: 0,
   });
 
-  const [allCountriesData, setAllCountriesData] = useState([
+  const [allCountriesData, setAllCountriesData] = useState<AllCountriesDataType>([
     {
       Country: '',
       NewConfirmed: 0,
